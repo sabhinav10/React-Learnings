@@ -1,28 +1,35 @@
-import React from 'react' //This code is not specific to React. It is general Javascript code.
-import ReactDOM from 'react-dom'
+import React from 'react'
+import ReactDom from "react-dom";
 
-//Stateless Functional componenets
-//Always return JSX
+function BookList(){
+  return(
+  <section>
+    <Book></Book>
+    <Book></Book>
+    <Book></Book>
+    <Book></Book>
+  </section>
+  )
+}
 
-// function Greeting(){
-//   return <h1>This is my first React Component.</h1>
-// }
-
-function Greetings2(){
+const Book = ()=>{
   return(
     <div>
-      <h1>Abhinav</h1>
-      <Greeting></Greeting>
+      <Image></Image>
+      <Title></Title>
+      <Author></Author>
     </div>
   )
 }
 
-const Greeting = () =>{
-  return(
-    <div>
-      <h1>Hello Friend</h1>
-    </div>
-  )
+const Image = () =>{
+  return <img src="https://img.bookchor.com/images/cover/719/9789388810968.jpg" alt="Thus Soke Zarathustra" />
 }
 
-ReactDOM.render(<Greetings2/>, document.getElementById('root'))
+const Title = () =>{
+  return <h1>Thus Spoke Zarathustra</h1>
+}
+
+const Author =()=> <h1>Friedrich Nietzsche</h1>
+
+ReactDom.render(<BookList/>, document.getElementById('root'))
