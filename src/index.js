@@ -8,8 +8,21 @@ import ReactDOM from 'react-dom'
 //   return <h1>This is my first React Component.</h1>
 // }
 
-const Greeting = () =>{
-  return React.createElement('h1',{},"hello world")
+function Greetings2(){
+  return(
+    <div>
+      <h1>Abhinav</h1>
+      <Greeting></Greeting>
+    </div>
+  )
 }
 
-ReactDOM.render(<Greeting/>, document.getElementById('root'))
+const Greeting = () =>{
+  return(
+    <div>
+      <h1>Hello Friend</h1>
+    </div>
+  )
+}
+
+ReactDOM.render(<Greetings2/>, document.getElementById('root'))
